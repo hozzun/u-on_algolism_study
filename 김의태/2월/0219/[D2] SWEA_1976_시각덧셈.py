@@ -1,3 +1,4 @@
+# 메모리 : 43,760 kb 시간 : 103 ms
 T = int(input())
 for tc in range(1, T+1):
     time_list = list(map(int, input().split()))
