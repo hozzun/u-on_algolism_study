@@ -1,3 +1,4 @@
+# 메모리 : 31900KB 시간 : 4004ms...?what the..
 k = int(input())
 k_list = []
 for i in range(k): #스택...0이면 빼고 아니면 넣고..
