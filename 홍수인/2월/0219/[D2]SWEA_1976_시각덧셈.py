@@ -1,3 +1,5 @@
+#메모리 58,784 시간 145ms
+
 T = int(input())
 for tc in range(1, T+1):
     arr = list(map(int, input().split()))
