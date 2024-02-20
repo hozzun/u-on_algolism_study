@@ -1,9 +1,9 @@
-# def change(n, s):
-#     if n == 0:
-#         return s
-#     change(n // 2, s + str(n % 2))
+def change(n, s):
+    if n == 0:
+        return s
+    change(n // 2, s + str(n % 2))
 
-# print(change(23, ''))  # None 나오는데 return 써줬는데 왜 결과 안나오는거 ? ㅠㅠ
+print(change(23, ''))  # None 나오는데 return 써줬는데 왜 결과 안나오는거 ? ㅠㅠ
 
 #------------------성공 수식-----------------------------------------
 
