@@ -1,3 +1,5 @@
+# 메모리 31120 시간 40ms
+
 def change(n, s):
     if n == 0:
         return s
