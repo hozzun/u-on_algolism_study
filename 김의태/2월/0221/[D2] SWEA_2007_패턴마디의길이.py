@@ -1,3 +1,4 @@
+# 42,480 kb 101 ms
 t = int(input())
 for k in range(0, t):
     string = input()
