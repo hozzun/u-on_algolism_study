@@ -1,3 +1,5 @@
+# 메모리 31120 KB, 시간 44 ms
+
 N = int(input())   # 스위치 개수
 switch = list(map(int, input().split()))
 S = int(input())   # 학생 수
