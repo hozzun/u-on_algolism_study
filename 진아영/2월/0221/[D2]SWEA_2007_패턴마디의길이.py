@@ -1,3 +1,5 @@
+메모리 58,532kb 시간 153ms
+
 for tc in range(1, 1+int(input())):
     pattern = input()
     result = 0
