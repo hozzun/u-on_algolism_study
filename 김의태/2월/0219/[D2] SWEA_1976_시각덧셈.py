@@ -1,4 +1,5 @@
 # 메모리 : 43,760 kb 시간 : 103 ms
+# idea : 인덱스 활용과 조건 잘 사용하기.
 T = int(input())
 for tc in range(1, T+1):
     time_list = list(map(int, input().split()))
