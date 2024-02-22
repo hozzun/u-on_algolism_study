@@ -1,4 +1,5 @@
 # 42,192 kb 103 ms
+# idea : 연도는 문제없다! 월과 일만 잘 구분하면 끝
 T = int(input())
 for tc in range(1, T+1):
     yyyymmdd = input()
