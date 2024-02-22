@@ -1,3 +1,4 @@
+# 런타임에러 10억짜리 안나옴 다른건 다나옴 (시간 계산 안함 ㅋㅋ)
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10**9)
