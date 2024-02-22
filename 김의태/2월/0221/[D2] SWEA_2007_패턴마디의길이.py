@@ -1,4 +1,5 @@
 # 42,480 kb 101 ms
+# idea : 체크할 길이를 점점 넓혀가주고, 해당 길이만큼 구간 이동해서 체크.
 t = int(input())
 for k in range(0, t):
     string = input()
