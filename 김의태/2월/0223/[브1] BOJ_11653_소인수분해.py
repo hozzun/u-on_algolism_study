@@ -4,7 +4,7 @@ n = int(input())
 
 x = 2 # 소수는 2부터니까
 answer = []
-while n != 1:
+while n != 1: # 처음에 0으로해서 틀린거였음!....ㅜ
     if n % x == 0:
         n = int(n / x)
         print(x)
