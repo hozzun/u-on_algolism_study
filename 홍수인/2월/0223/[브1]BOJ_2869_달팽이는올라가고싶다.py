@@ -1,9 +1,10 @@
-# 테케 다 나오는데.... 반례를 도저히 못 찾겠음요...... 같이 찾아주삼.....ㅜㅡㅜㅡㅜㅡㅜㅡㅜㅡㅡㅜㅜㅜㅜㅜㅜㅠㅠㅠ
+# 드디어 성공 ..... 달팽이 개미워
+# 메모리 108080 / 시간 108ms
 
 a, b, v = list(map(int, input().split()))
 cycle = a-b
-
-if (v-a) // cycle == 0 or (v-a) % cycle > 0:
+# 212
+if (v-a) != 0 and (v-a) // cycle == 0 or (v-a) % cycle > 0:
     result = (v-a) // cycle + 2
 elif (v-a) // cycle > 0:
     result = (v-a) // cycle + 1
