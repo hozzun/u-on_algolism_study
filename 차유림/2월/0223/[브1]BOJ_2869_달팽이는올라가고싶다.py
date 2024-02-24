@@ -18,3 +18,17 @@ while c < V: # c != V 하니까 무한루프 걸림 ㅜㅜ
             break # 멈춤 
 
 print(cnt)
+
+# -----------------------------------------------------------------
+
+# 메모리 31120kb 시간 40ms
+A, B, V = map(int, input().split())
+day = V - B 
+cycle = A - B
+result = 0
+if day % cycle != 0:
+    result = day // cycle + 1
+else:
+    result = day // cycle 
+
+print(result)
