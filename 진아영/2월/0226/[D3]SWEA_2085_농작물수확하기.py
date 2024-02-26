@@ -1,3 +1,5 @@
+# 메모리 63,036 kb, 시간 238 ms
+
 for tc in range(1, 1+int(input())):
     N = int(input())
     farm = [list(map(int, input())) for _ in range(N)]
