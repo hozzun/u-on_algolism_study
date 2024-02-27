@@ -6,7 +6,7 @@ for tc in range(1, 1+int(input())):
     matrix_3 = []
 
     for _ in range(N):
-        a = list(map(int, input().split()))
+        a = list(map(str, input().split()))
         matrix_1 += a
         matrix_2 += a
         matrix_3 += a
@@ -27,4 +27,23 @@ for tc in range(1, 1+int(input())):
         for j in range(N-1, -1, -1):   # 거꾸로
             new_matrix_3[j][i] = matrix_3.pop(0)
 
-    # 근데 이제 어떻게 출력하지?
+    print(f'#{tc}')
+    for a, b, c in zip(new_matrix_1, new_matrix_2, new_matrix_3):
+        aa = ''.join(a)
+        bb = ''.join(b)
+        cc = ''.join(c)
+        print(aa, bb, cc)
+
+    '''
+    1)
+    zip함수로 예를들어 
+    7 4 1 
+    8 5 2 
+    9 6 3 이렇게 3 x 3 배열형태로 있으면
+    --> 741
+        852
+        963 으로 붙혀서 하나로 만들어줌
+        
+    2) 
+    zip함수는 str만 되서 map(int 부분 str로 바꿈
+    '''
