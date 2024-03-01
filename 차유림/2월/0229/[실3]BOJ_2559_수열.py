@@ -10,3 +10,18 @@ for i in range(N - K + 1):
         max_v = sum_v
 
 print(max_v)
+
+# 슬라이싱하고 sys해도 안되네... ㅠ 
+import sys
+
+N, K = map(int, sys.stdin.readline().split())
+arr = list(map(int, sys.stdin.readline().split()))
+max_v = - 99999
+
+for i in range(N - K + 1):
+    sum_v = 0
+    sum_v = sum(arr[i:i+K])
+    if max_v < sum_v:
+        max_v = sum_v
+
+print(max_v)
