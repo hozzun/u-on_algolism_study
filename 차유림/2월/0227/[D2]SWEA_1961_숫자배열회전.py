@@ -22,21 +22,6 @@ for tc in range(1, T+1):
     print(f"#{tc}")
 
     # 스트링으로 바꿔줄럤는데 괄호랑 콤마 때문에 안돼 ㅜ
-    # string1 = ''
-    # for i in mat_90:
-    #     string1 += str(i)
-    # print(string1)
-
-    # string2 = ''
-    # for i in mat_180:
-    #     string2 += str(i)
-    # print(string2)
-
-    # string3 = ''
-    # for i in mat_270:
-    #     string3 += str(i)
-    # print(string3)
-
 
     for x, y, z in zip(mat_90, mat_180, mat_270):
         a = ' '.join(map(str, x))
@@ -48,6 +33,7 @@ for tc in range(1, T+1):
 
 
 # 성공
+# swea 1961번 숫자 배열 회전 메모리 58,252kb 시간 162ms
 T = int(input())
 for tc in range(1, T+1):
     N = int(input())
@@ -55,20 +41,19 @@ for tc in range(1, T+1):
     mat_90 = [[0] * N for _ in range(N)]
     for i in range(N):
         for j in range(N):
-            mat_90[j][N - i - 1] = arr[i][j]
+            mat_90[j][N - i - 1] = arr[i][j] 
 
     mat_180 = [[0] * N for _ in range(N)]
     for i in range(N):
         for j in range(N):
-            mat_180[N - i - 1][N - j - 1] = arr[i][j] # 원래 mat_90[i][j] 했는데 이상하게 나옴 ㅠ,,
+            mat_180[j][N - i - 1] = mat_90[i][j] 
         
     mat_270 = [[0] * N for _ in range(N)]
     for i in range(N):
         for j in range(N):
-            mat_270[N - j - 1][i] = arr[i][j] # 원래 mat_180[i][j] 했는데 이상하게 나옴 ㅠ,, 바꿨더니 제대로 나옴
+            mat_270[j][N - i - 1] = mat_180[i][j]
 
     print(f"#{tc}")
-
 
     for x, y, z in zip(mat_90, mat_180, mat_270):
         a = ''.join(map(str, x))
