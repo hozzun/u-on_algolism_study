@@ -1,3 +1,5 @@
+# 58,244 kb, 153 ms
+
 for tc in range(1, 1+int(input())):
 
     len_1, len_2 = map(int, input().split())
