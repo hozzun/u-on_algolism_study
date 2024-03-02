@@ -26,3 +26,25 @@ for tc in range(1, 1+int(input())):
                 crops += farm[N - i -1][N // 2 + j]   # 여기가 아랫부분
 
     print(f'#{tc} {crops}')
+
+#------------------------------------------------------------
+
+for tc in range(1, 1+int(input())):
+    N = int(input())
+    field = [list(map(int, input())) for _ in range(N)]
+ 
+    s, e = N // 2, N // 2 + 1
+    crop = 0
+ 
+    for i in range(N):
+ 
+        crop += sum(field[i][s:e])
+ 
+        if i < N // 2:
+            s -= 1
+            e += 1
+        else:
+            s += 1
+            e -= 1
+ 
+    print(f'#{tc} {crop}')
