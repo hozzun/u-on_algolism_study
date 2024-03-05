@@ -11,9 +11,9 @@ def dfs(i): # i : 시작 노드
             dfs(w)
     return cnt
 
-V = int(input())
-E = int(input())
-arr = [[] for _ in range(V+1)]
+V = int(input()) # 노드 수 
+E = int(input()) # 간선 수
+arr = [[] for _ in range(V+1)] # 인접리스트
 for _ in range(E):
     n1, n2 = map(int, input().split())
     arr[n1].append(n2)
