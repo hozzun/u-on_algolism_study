@@ -2,6 +2,7 @@
 
 from collections import deque
 
+# dfs로 하니까 메모리 초과나서 bfs로 바꿔줌
 def bfs(i, j, h):
     q = deque()
     visited[i][j] = 1
@@ -24,7 +25,7 @@ max_high = max(map(max, ground))
 di = [0, 0, -1, 1]
 dj = [-1, 1, 0, 0]
 
-
+# 강수량 0 일때부터 최고 높이일때까지 비교해보면서 구역의 수 세줌
 for high in range(0, max_high + 1):
     visited = [[0] * N for _ in range(N)]
     safe_area = 0
@@ -33,6 +34,7 @@ for high in range(0, max_high + 1):
             if ground[r][c] > high and not visited[r][c]:
                 bfs(r, c, high)
                 safe_area += 1
+    # 구역 최댓값인지 확인해줌
     if safe_area > max_safe_area:
         max_safe_area = safe_area
 
