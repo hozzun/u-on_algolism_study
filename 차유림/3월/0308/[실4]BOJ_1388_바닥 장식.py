@@ -3,14 +3,14 @@ def dfs_garo(r,c): # - 탐색
     if arr[r][c] == '-': # 바닥장식이 - 라면 
         arr[r][c] = 1 # 1로 바꿔준다
 
-        if c + 1 < M and arr[r][c+1]: # 열위치 + 1 < M 이고 오른쪽칸 - 이면 
+        if c + 1 < M and arr[r][c+1] == '-': # 열위치 + 1 < M 이고 오른쪽칸 - 이면 
             dfs_garo(r, c + 1) # 탐색 계속 고고
 
 def dfs_saero(r,c): # | 탐색
     if arr[r][c] == '|':
         arr[r][c] = 1
 
-        if r + 1 < N and arr[r+1][c]: # 행위치 + 1 < N 이고 밑에 칸이 | 이면 
+        if r + 1 < N and arr[r+1][c] == '|': # 행위치 + 1 < N 이고 밑에 칸이 | 이면 
             dfs_saero(r+1, c) # dfs 고고
 
 
