@@ -3,7 +3,7 @@ def dfs(r,c):
     for k in range(4):
         nr = r + di[k]
         nc = c + dj[k]
-        if 0 <= nr < M and 0 <= nc < N and baechu[nr][nc] == 0:
+        if 0 <= nr < M and 0 <= nc < N and baechu[nr][nc] == 1:
             dfs(nr,nc)
 
 
@@ -19,8 +19,8 @@ for tc in range(1, T+1):
         baechu[x][y] = 1
         
     
-    for i in range(M):
-        for j in range(N):
+    for j in range(M):
+        for i in range(N):
             if baechu[i][j] == 1:
                 dfs(i, j)
                 cnt += 1
