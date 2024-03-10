@@ -1,3 +1,5 @@
+# Python 메모리: 31484KB, 시간: 304ms, 코드 길이: 790B
+
 import sys
 sys.setrecursionlimit(10**6)
 
