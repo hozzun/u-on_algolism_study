@@ -1,3 +1,47 @@
+# 111476KB 160ms
+
+N, M, V = map(int, input().split())  # 노드 수, 간선 수, 탐색 시작 번호
+adjl = [[] for _ in range(N + 1)]
+visited_1 = [0] * (N + 1)
+visited_2 = [0] * (N + 1)
+q = []
+
+for _ in range(M):
+    a, b = map(int, input().split())
+    adjl[b].append(a)
+    adjl[a].append(b)
+
+adjl = list(map(sorted, adjl))
+
+def dfs(i):
+    visited_1[i] = 1     # 방문표시
+    print(i, end = ' ')
+    lst = adjl[i]        # 그 노드와 연결된 노드 리스트
+
+    for j in lst:
+        if not visited_1[j]:   # 연결 노드중 방문하지 않은 노드
+            dfs(j)             # dfs 재귀
+
+def bfs(i):
+    q = []
+    q.append(i)       # q에 첫 노드 append
+    visited_2[i] = 1  # 방문표시
+    while q:          # 너비우선탐색할 노드가 없을때까지
+        a = q.pop(0)
+        print(a, end = ' ')
+        for j in adjl[a]:    # 그 노드와 연결된 노드 리스트
+            if not visited_2[j]:    # 연결 노드중 방문하지 않은 노드
+                visited_2[j] = 1    # 방문표시 해주고
+                q.append(j)         # 그 노드와 연결된 노드 리스트 검색하기 위해 q에 append
+
+dfs(V)
+print()
+bfs(V)
+
+
+
+
+#---------------------------------수정 전---------------------------------------------------------
 N, M, V = map(int, input().split())  # 노드 수, 간선 수, 탐색 시작 번호
 adjl = [[] for _ in range(N + 1)]
 visited_1 = [0] * (N + 1)
