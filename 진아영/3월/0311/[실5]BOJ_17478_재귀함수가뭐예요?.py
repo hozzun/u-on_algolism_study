@@ -1,3 +1,5 @@
+# 	108080 KB, 	116 ms, 845 B
+
 time = int(input())  # 반복 횟수
 
 def chat_bot(i):
