@@ -1,4 +1,5 @@
-# 파이썬 144340 Kb, 732 ms, 397 B
+# 파이썬   144340 KB, 732 ms, 397 B
+# 파이파이 250716 KB, 432 ms
 
 N = int(input())  # 시험장 수
 test = list(map(int, input().split()))
