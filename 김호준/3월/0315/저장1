@@ -1,0 +1,37 @@
+N = int(input())
+
+arr = []
+for i in range(N):
+    num = int(input())
+    arr.append(num)
+
+arr.sort()
+
+# 산술평균
+ans1 = sum(arr) // N
+print(ans1)
+
+# 중앙값
+ans2 = arr[N//2]
+print(ans2)
+
+# 최빈값
+ans3 = 0
+cnt = 0
+for i in arr:
+    if arr.count(i) > cnt:
+        cnt = arr.count(i)
+        ans3 = i
+if cnt == 1 and len(arr) > 1:
+    print(arr[1])
+elif len(arr) == 1:
+    print(arr[0])
+else:
+    print(ans3)
+
+# 범위
+if len(arr) == 1:
+    print(0)
+else:
+    ans4 = max(arr) - min(arr)
+    print(ans4)
