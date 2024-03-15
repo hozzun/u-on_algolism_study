@@ -1,4 +1,5 @@
-# 시험감독
+# 시간 초과
+# 반복문 2개쓰면 안된다는 것을 알지만.. 2개 안쓰고 어케품!! 생각이 안나~
 import sys
 input = sys.stdin.readline
 
