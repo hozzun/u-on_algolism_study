@@ -1,7 +1,5 @@
 # 백준 1092번 배 
 # 메모리 110648KB 시간 4416ms 코길 613b
-import sys
-input = sys.stdin.readline
 
 N = int(input())
 limit = list(map(int, input().split()))
@@ -21,7 +19,7 @@ else:
         for i in range(N):
             for j in range(len(weight)): # weight는 계속 변동되므로 len해준다
                 if weight[j] <= limit[i]:
-                    weight.pop(weight[j])
+                    weight.remove(weight[j])
                     break   
                 else:
                     j += 1
