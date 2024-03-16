@@ -1,12 +1,16 @@
 n = int(input())
 num_lst = [int(input()) for _ in range(n)]
 
+# 1. 산술평균
 print(int(sum(num_lst)/n))
+
+# 2. 중앙 값
 num_lst.sort()
 print(num_lst[n//2])
 
+# 3. 최빈 값
 set_lst = set(num_lst)
-count_lst = []
+count_lst = []   # 숫자의 갯수를 저장할 리스트
 
 if len(set_lst) == n:  # 모든 수가 중복되지 않는 경우
     if len(num_lst) == 1:
@@ -32,4 +36,5 @@ else:
                 idx = i
         print(set_l[idx])
 
+# 4. 범위
 print(num_lst[-1] - num_lst[0])
