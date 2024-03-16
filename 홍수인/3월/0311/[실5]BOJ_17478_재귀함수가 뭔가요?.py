@@ -1,4 +1,6 @@
-def func(num):
+31120kb  44msdef 
+
+func(num):
     bar = '____'
     if num == n:
         print(f'{bar*num}"재귀함수는 자기 자신을 호출하는 함수라네"')
