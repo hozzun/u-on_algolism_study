@@ -1,3 +1,5 @@
+# 메로리 : 31120, 시간 : 40ms, 코드 길이 : 943B
+
 def dfs(current_node):
     global cnt
     global result
@@ -10,6 +12,7 @@ def dfs(current_node):
             visited[i] = 1   # 방문표시
             cnt += 1    # cnt 증가
             dfs(i)     # 이동한 노드를 current_node로 넘겨 dfs 호출
+            cnt -= 1
 
 n = int(input())
 a, b = map(int, input().split())
