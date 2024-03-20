@@ -1,3 +1,8 @@
+# 파이파이  113144 KB, 200 ms, 979 B
+# 파이썬    	 31252 KB, 68 ms
+
+
+
 N = int(input())   # 수의 개수
 num_list = list(map(int, input().split()))   # 숫자
 unit_1 = list(map(int, input().split()))  # 연산자 수 ( +, -, *, / )
