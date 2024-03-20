@@ -58,3 +58,68 @@ for a in range(blank_cnt):
                     safe_max = safe
 
 print(safe_max)
+
+
+#-----------------------------처음에 재귀로 풀었다가 시간초과 해결 안돼서 버림--------------------------
+from collections import deque
+import copy
+
+# 바이러스 확산시키는 bfs함수
+def virus(i, j, cur_lab):
+
+    visited = [[0] * M for _ in range(N)]
+    Q = deque()
+    Q.append((i, j))
+    visited[i][j] = 1
+
+    while Q:
+        cur = Q.popleft()
+        for k in range(4):
+            ni = cur[0] + di[k]
+            nj = cur[1] + dj[k]
+            if 0 <= ni < N and 0 <= nj < M and cur_lab[ni][nj] == 0 and visited[ni][nj] == 0:
+                visited[ni][nj] = 1
+                cur_lab[ni][nj] = 2
+                Q.append((ni, nj))
+    return cur_lab
+
+
+# 벽 세우는 재귀함수
+def wall(i):
+    global safe_max
+    if i == 3:
+        
+        check_lab = copy.deepcopy(lab)
+        for r in range(N):
+            for c in range(M):
+                if check_lab[r][c] == 2:
+                    check_lab = virus(r, c, check_lab)
+
+        safe = 0
+        for a in range(N):
+            for b in range(M):
+                if check_lab[a][b] == 0:
+                    safe += 1
+                    
+        if safe > safe_max:
+            safe_max = safe
+        return
+    
+    for x in range(N):
+        for y in range(M):
+            if lab[x][y] == 0:
+                lab[x][y] = 1
+                wall(i + 1)
+                lab[x][y] = 0
+
+
+N, M = map(int, input().split())   # 세로, 가로
+lab = [list(map(int, input().split())) for _ in range(N)]
+
+di = [0, 0, 1, -1]
+dj = [-1, 1, 0, 0]
+safe_max = 0
+
+wall(0)
+
+print(safe_max)
