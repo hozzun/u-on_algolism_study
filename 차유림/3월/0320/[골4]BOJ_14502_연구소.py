@@ -1,5 +1,5 @@
 # 백준 14502번 연구소 
-# thx hj,,,, 알려준대로 했더니 됐어. . . wow!!!!!!
+# thx hj,,,, 알려준대로 했더니 됐어. . .  wow!!!!!! 압도적 감사! ! ! 
 # 메모리 127176 kb 시간 2672kb 코길 1152b
 from collections import deque
 import copy
