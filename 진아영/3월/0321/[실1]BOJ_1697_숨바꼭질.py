@@ -1,4 +1,5 @@
-# 파이썬   35320 KB, 104 ms, 666 B
+# 파이썬    35320 KB, 104 ms, 666 B
+# 파이파이 115912 KB, 148 ms
 
 
 from collections import deque
