@@ -1,5 +1,5 @@
 # BOJ 2178 미로 탐색 [실1]
-# PyPy 메모리: 114320KB, 시간: 160ms, 코드 길이: 778B
+# Python 메모리: 34204KB, 시간: 76ms, 코드 길이: 778B
 
 from collections import deque
 
