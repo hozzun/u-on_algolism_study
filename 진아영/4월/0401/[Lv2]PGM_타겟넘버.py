@@ -1,3 +1,5 @@
+# 100점
+
 import sys
 sys.setrecursionlimit(10000000)
 
