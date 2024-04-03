@@ -4,6 +4,8 @@
 # => 스택 문제인데 걍 구현으로 푼듯
 
 from math import ceil # 올림 함수 (라이브러리)
+# 대신 무조건 올림
+# ex)  2.1 => 3 
 
 def solution(progresses, speeds):
     answer = []
