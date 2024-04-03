@@ -6,6 +6,7 @@
 from math import ceil # 올림 함수 (라이브러리)
 # 대신 무조건 올림
 # ex)  2.1 => 3 
+# 하고 나서 보니 round(ans + 0.5) 했으면 됐는데 생각이 안났네 ㅎㅎ
 
 def solution(progresses, speeds):
     answer = []
