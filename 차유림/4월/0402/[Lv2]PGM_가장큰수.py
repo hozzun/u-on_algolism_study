@@ -15,3 +15,17 @@ def solution(numbers):
                   
     real_val = max(real)
     return str(real_val)
+
+
+#---------------------------------------------------
+from itertools import permutations
+
+def solution(numbers):
+    result = list(permutations(numbers, len(numbers)))
+    real = []
+    for num in result:
+        digit = int(''.join(map(str, num)))
+        real.append(digit)
+                  
+    real_val = max(real)
+    return str(real_val)
