@@ -3,8 +3,8 @@
 from itertools import combinations 
 # def solution(orders, course):
 #     answer = []
-#     for i in course:
-#         comb = []
+#     comb = []
+#     for i in course:    
 #         for j in orders:
 #             comb += list(combinations(j, i))
 
