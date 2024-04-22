@@ -11,9 +11,10 @@
     
 #     print(f"#{tc} {ball_cnt}")
 
+
+
 # 성공버전 
 # 44988 kb 112 ms 코길 194
-
 
 T = int(input())
 for tc in range(1, T+1):
