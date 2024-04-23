@@ -12,10 +12,10 @@ def solution(people, limit):
         if start == end:  # start와 end가 만났으면 사람 다 태웠으므로 break
             break
         
-        if p1 + p2 <= limit:  # 둘이 보트에 같이 탈 수 있으면 start 옮겨준다
+        if p1 + p2 <= limit:  # 둘이 보트에 같이 탈 수 있으면 start 인덱스 옮겨준다
             start += 1
                 
-        end -= 1
+        end -= 1   # end는 항상 보트에 타므로 조건 없이 end 인덱스 옮기기
 
     return answer
 
