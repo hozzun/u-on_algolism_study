@@ -1,4 +1,5 @@
 # ㅈㅅㅈㅅ 다시 못풀어봄..
+# 시간 초과
 
 from collections import deque
 import sys
