@@ -6,8 +6,9 @@
 N = int(input())
 city = [int(input()) for _ in range(N)]
 
-buildings = []  # 현재 인덱스를 볼 수 있는 건물들 후보가 담긴 스택
-building = 0
+buildings = []  # 현재 건물을 볼 수 있는 건물들 후보가 담긴 스택
+                # -> for문 한번만 돌려면 (N이 10억인가? 뭐 그래서) 현재 건물을 볼 수 있는 건물을 세줘야할거같았음
+building = 0    # answer
 
 for i in range(N):
     while buildings:  # 후보군이 있으면
