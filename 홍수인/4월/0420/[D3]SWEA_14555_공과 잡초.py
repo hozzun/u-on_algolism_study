@@ -1,3 +1,5 @@
+# 메모리: 51120kb / 실행시간 : 125ms
+
 T = int(input())
 for tc in range(1, T+1):
     ball = input()
