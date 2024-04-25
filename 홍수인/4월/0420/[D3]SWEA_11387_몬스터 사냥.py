@@ -1,3 +1,5 @@
+# 메모리 : 10812kb / 실행시간 : 1057ms
+
 T = int(input())
 
 for tc in range(1, T+1):
