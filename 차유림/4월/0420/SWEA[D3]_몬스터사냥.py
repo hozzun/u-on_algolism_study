@@ -2,8 +2,8 @@
 T = int(input())
 for tc in range(1, T+1):
     D, L, N = map(int, input().split())
-    demage = 0
+    damage = 0
     for i in range(N):
-        demage += D + (L * D/100 * i)
-    demage = int(demage)
-    print(f"#{tc} {demage}")
+        damage += D + (L * D/100 * i)
+    damage = int(damage)
+    print(f"#{tc} {damage}")
