@@ -1,4 +1,32 @@
+# 성공 코드 -> 완전탐색했더니 시간초과 해결 못해서 딕셔너리 만들어서 중복제거
 
+def solution(weights):
+    answer = 0
+    weight_dic = {}
+    
+    weights.sort(reverse=True) # 정렬해줘야 비율 계산 가능
+    
+    for weight in weights:
+        if weight in weight_dic:
+            # 1. 1:1인 균형 더하기
+            answer += weight_dic[weight]
+            # 갯수 추가
+            weight_dic[weight] += 1
+        else:
+            # 갯수 추가
+            weight_dic[weight] = 1
+        
+        # 2. 1:2인 균형 더하기
+        if weight * 2 in weight_dic:
+            answer += weight_dic[weight*2]
+        # 3. 2:3인 균형 더하기
+        if weight * 3 / 2 in weight_dic:
+            answer += weight_dic[weight*3/2]
+        # 4. 3:4인 균형 더하기
+        if weight * 4 / 3 in weight_dic:
+            answer += weight_dic[weight*4/3]
+    
+    return answer
 
 
 
