@@ -24,3 +24,28 @@ if max_todays:
     print(max_count)
 else:
     print('SAD')
+
+
+# -----근데 이건 왜 틀렸지? 맨 첨엔 누적합 배열 새로 안만들고 있던거 초기화해서 했는뎁..------------
+# 64퍼센트 틀렸습니다
+
+N, X = map(int, input().split())  # N일차, X일동안
+todays = list(map(int, input().split()))  # N일동안 방문자 수
+max_todays = 0
+max_count = 0
+
+if set(todays) == {0}:
+    print('SAD')
+    exit(0)
+
+for i in range(1, N):
+    todays[i] = todays[i-1] + todays[i]
+    if i > X-1:
+        if max_todays == todays[i]-todays[i-X]:
+            max_count += 1
+        elif max_todays < todays[i]-todays[i-X]:
+            max_todays = todays[i]-todays[i-X]
+            max_count = 1
+
+print(max_todays)
+print(max_count)
