@@ -30,22 +30,16 @@ for _ in range(int(input())):
                 if gears[next][6] != cur_r and (next, cur_turn * (-1)) not in turn_gears:
                     turn_gears.append((next, cur_turn * (-1)))
                     Q.append((next, cur_turn * (-1)))
-
+                    
+    # 톱니바퀴 돌리기
     for turn_num, turn_d  in turn_gears:
         if turn_d == 1:
             gears[turn_num] = gears[turn_num][7:] + gears[turn_num][:7]   # 시계방향
         else:
             gears[turn_num] = gears[turn_num][1:] + gears[turn_num][:1]   # 반시계방향
 
-
 for s in range(4):
-    if s == 0 and gears[s][0] == 1:    # 점수 계산
-        score += 1
-    elif s == 1 and gears[s][0] == 1:
-        score += 2
-    elif s == 2 and gears[s][0] == 1:
-        score += 4
-    elif s == 3 and gears[s][0] == 1:
-        score += 8
+    if gears[s][0] == 1:  # 점수 계산
+        score += 2 ** s
 
 print(score)
