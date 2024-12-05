@@ -24,14 +24,14 @@
 
 <table>
  <tr>
-    <td align="center"><a href="https://github.com/ssafy11"><img src="https://avatars.githubusercontent.com/ssafy11" width="130px;" alt=""></a></td>
+    <td align="center"><a href="https://github.com/ssafy11"><img src="https://avatars.githubusercontent.com/hozzun" width="130px;" alt=""></a></td>
     <td align="center"><a href="https://github.com/undertheear"><img src="https://avatars.githubusercontent.com/undertheear" width="130px;" alt=""></a></td>
     <td align="center"><a href="https://github.com/ssuinh"><img src="https://avatars.githubusercontent.com/ssuinh" width="130px;" alt=""></a></td>
     <td align="center"><a href="https://github.com/chajoyhoi"><img src="https://avatars.githubusercontent.com/chajoyhoi" width="130px;" alt=""></a></td>
     <td align="center"><a href="https://github.com/JinAyeong"><img src="https://avatars.githubusercontent.com/JinAyeong" width="130px;" alt=""></a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/ssafy11"><b>Hojun Kim</b></a></td>
+    <td align="center"><a href="https://github.com/hozzun"><b>Hojun Kim</b></a></td>
     <td align="center"><a href="https://github.com/undertheear"><b>Euitae Kim</b></a></td>
     <td align="center"><a href="https://github.com/ssuinh"><b>Suin Hong</b></a></td>
     <td align="center"><a href="https://github.com/chajoyhoi"><b>Yurim Cha</b></a></td>
